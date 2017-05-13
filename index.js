@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('Hello world, I am a chat bot')
+    res.send('Hello world, I am a chat bot, Meow..')
 })
 
 // for Facebook verification
@@ -26,7 +26,7 @@ app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === vtoken) {
         res.send(req.query['hub.challenge'])
     }
-    res.send('No sir')
+    res.send('You shall not pass!!')
 })
 
 // Spin up the server
