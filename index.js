@@ -26,7 +26,7 @@ app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === vtoken) {
         res.send(req.query['hub.challenge'])
     }
-    res.send('You shall not pass!!')
+    res.send('vtoken')
 })
 
 // Spin up the server
