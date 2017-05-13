@@ -1,0 +1,22 @@
+{
+  "name": "facebookbot",
+  "version": "1.0.0",
+  "description": "my first facebook bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "lol"
+  },
+  "keywords": [
+    "facebook",
+    "chatbot",
+    "node",
+    "heroku"
+  ],
+  "author": "Shashank Pathak",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
