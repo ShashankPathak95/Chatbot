@@ -23,10 +23,10 @@ app.get('/', function (req, res) {
 
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
-    if (req.query['hub.verify_token'] === vtoken) {
+    if (req.query['hub.verify_token'] === "TOKEN") {
         res.send(req.query['hub.challenge'])
     }
-    res.send('vtoken')
+    res.send('You shall not pass!')
 })
 
 // Spin up the server
