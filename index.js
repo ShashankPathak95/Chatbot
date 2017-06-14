@@ -41,9 +41,21 @@ app.post('/webhook/', function (req, res) {
       let sender = event.sender.id
       if (event.message && event.message.text) {
         let text = event.message.text
-        if (text === 'card') {
-            sendGenericMessage(sender)
-            continue
+		switch(text){
+			case 'card':
+				sendGenericMessage(sender);
+				break;
+			
+			case 'meow':
+				sendGenericMessage(sender);
+				break;
+			
+			default:
+				sendTextMessage(sender, "Message received: " + text.substring(0, 200);
+		}
+        //if (text === 'card') {
+          //  sendGenericMessage(sender)
+            //continue
         }
         sendTextMessage(sender, "Message received: " + text.substring(0, 200))
       }
